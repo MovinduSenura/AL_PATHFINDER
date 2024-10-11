@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { router, Link } from 'expo-router';
-import { View, Text, ScrollView, TouchableOpacity, TextInput, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import FormFeild from '../../components/FormFeild';
 import Signin from '../../assets/images/signinphoto.png'; 
@@ -19,45 +20,54 @@ const SignIn = () => {
   };
 
   return (
-    <SafeAreaView className="flex-1 justify-center px-4 pt-14 bg-white">
-      <ScrollView contentContainerStyle={{ padding: 20 }}>
-        <View className="w-full mb-6 flex justify-center items-center">
-          <Text className="text-3xl font-bold text-left mb-4">Sign In to Continue!</Text>
-          <Image source={Signin} className="my-3" />
-        </View>
-        <FormFeild
-          title="Email"
-          value={formData.email}
-          onChangeText={(value) => handleChangeText('email', value)}
-          otherStyles="mb-4"
-          keyboardType="email-address"
-        />
-        <FormFeild
-          title="Password"
-          value={formData.password}
-          onChangeText={(value) => handleChangeText('password', value)}
-          otherStyles="mb-4"
-          keyboardType="default"
-          secureTextEntry={true}
-        />
+    <SafeAreaView className="flex-1 bg-white">
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        style={{ flex: 1 }}
+      >
+        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', paddingHorizontal: 24, paddingTop: 56 }}>
+          <View className="w-full mb-6 flex justify-center items-center">
+            <Text className="text-3xl font-bold text-left mb-4">Sign In to Continue!</Text>
+            <Image source={Signin} className="my-3" />
+          </View>
+          
+          {/* Using FormFeild component for email and password input */}
+          <FormFeild
+            title="Email"
+            value={formData.email}
+            onChangeText={(value) => handleChangeText('email', value)}
+            otherStyles="mb-4"
+            keyboardType="email-address"
+          />
+          <FormFeild
+            title="Password"
+            value={formData.password}
+            onChangeText={(value) => handleChangeText('password', value)}
+            otherStyles="mb-4"
+            keyboardType="default"
+            secureTextEntry={true}
+          />
 
-        <View className="">
-          <TouchableOpacity>
-            <Text className="font-semibold text-center mt-10 -mb-5">Forgot password?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity className="">
-            <Text onPress={() => router.push('/Home')} className="bg-[#76B4D0] mt-10 py-4 mb-2 rounded-2xl text-lg text-center font-semibold">Sign In</Text>
-          </TouchableOpacity>
-        </View>
+          {/* Forgot Password and Sign In Button */}
+          <View className="mt-10">
+            <TouchableOpacity>
+              <Text className="font-semibold text-center text-gray-500 mb-5">Forgot password?</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity onPress={() => router.push('/Home')}>
+              <View className="bg-[#76B4D0] py-4 rounded-2xl">
+                <Text className="text-lg text-center font-semibold">Sign In</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
 
-        <View className="flex-row justify-center gap-2 mt-auto mb-10">
-          <TouchableOpacity className="mt-32">
+          {/* Navigation to Sign Up Page */}
+          <View className="flex-row justify-center gap-2 mt-auto mb-10">
             <Text className="font-semibold">No Account yet?</Text>
-          </TouchableOpacity>
-          <Link href={'/signup'} className='font-bold text-[#76B4D0]'>Register here.</Link>
-        </View>
-
-      </ScrollView>
+            <Link href={'/signup'} className='font-bold text-[#76B4D0]'>Register here.</Link>
+          </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };

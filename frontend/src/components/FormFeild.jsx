@@ -4,7 +4,7 @@ import { View, Text, TextInput } from 'react-native';
 const FormFeild = ({ title, value, onChangeText, otherStyles, keyboardType, secureTextEntry }) => {
     return (
         <View className={`space-y-2 ${otherStyles}`}>
-            <View className="w-full h-16 px-4 bg-gray-200 rounded-2xl focus:border-2 focus:border-indigo-600">
+            <View className="w-full h-16 px-4 bg-gray-200 rounded-2xl focus:border-2 focus:border-[#76B4D0]">
                 <TextInput
                     value={value}
                     placeholder={title}

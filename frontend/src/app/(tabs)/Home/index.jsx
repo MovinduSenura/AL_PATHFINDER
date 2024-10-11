@@ -1,5 +1,5 @@
-import { View, Text, StyleSheet, Image, Pressable, ScrollView } from "react-native";
-
+import React from 'react';
+import { View, Text, StyleSheet, Image, Pressable, ScrollView, Platform } from 'react-native';
 
 const Home = () => {
   return (
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   forYou1: {
     fontSize: 20,
     fontWeight: "800",
-    fontFamily: "serif",
+    fontFamily: Platform.OS === 'ios' ? 'serif' : 'serif',
     color: "#353333",
     textAlign: "center",
     marginTop: 20,
@@ -104,10 +104,10 @@ const styles = StyleSheet.create({
   theSkillTest: {
     top: 23,
     fontSize: 10,
-    fontFamily: "serif",
+    fontFamily: Platform.OS === 'ios' ? 'serif' : 'serif',
     position: "absolute",
     left: 112,
-    width: 240,
+    width: 235,
     textAlign: "justify",
     lineHeight: 14,
     color: "#000",
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     left: 112,
     fontSize: 13,
     fontWeight: "800",
-    fontFamily: "serif",
+    fontFamily: Platform.OS === 'ios' ? 'serif' : 'serif',
   },
   card: {
     shadowColor: "rgba(0, 0, 0, 0.25)",
