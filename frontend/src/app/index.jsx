@@ -1,20 +1,9 @@
-import { Redirect, useNavigation, router } from "expo-router";
-import { SafeAreaView, View, Text, TouchableOpacity } from "react-native";
-// import { useGlobalContext } from "../con"
+import Welcome from './(auth)/welcome';
 
-const Welcome = () => {
-
-  // const {isLoading , isLoggedIn } = useGloba
+export default function App() {
   return (
-    <SafeAreaView>
-      <View className="h-screen flex justify-center items-center">
-        <Text>Welcome</Text>
-        <TouchableOpacity className="bg-indigo-600 rounded-lg px-8 py-2"  onPress={() => router.push('/onboard1')} >
-          <Text className="text-white">Go to Nav</Text>
-        </TouchableOpacity>
-      </View>
-    </SafeAreaView>
-  )
+    <>
+      <Welcome />
+    </>
+  );
 }
-
-export default Welcome
