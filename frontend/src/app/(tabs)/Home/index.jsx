@@ -28,7 +28,7 @@ const Home = () => {
           <Text style={styles.skillTest}>Skill Test</Text>
         </Pressable>
 
-        <Pressable style={styles.card} onPress={() => {}}>
+        <Pressable style={styles.card} onPress={() => router.push('/Home/degreeselection')}>
           <View style={styles.cardChild} />
           <Image
             style={styles.onczpn8501Icon}
@@ -54,7 +54,7 @@ const Home = () => {
           <Text style={styles.skillTest}>Teacher Consultation</Text>
         </Pressable>
 
-        <Pressable style={styles.card} onPress={() => {}}>
+        <Pressable style={styles.card} onPress={() => router.push('/Home/courseselection')}>
           <View style={styles.cardChild} />
           <Image
             style={styles.onczpn8501Icon}
