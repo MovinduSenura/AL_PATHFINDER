@@ -26,14 +26,18 @@ const SignIn = () => {
         style={{ flex: 1 }}
       >
         <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', paddingHorizontal: 24, paddingTop: 56 }}>
+          <View className="w-full mb-6 flex">
+            <Text className="text-3xl font-bold text-[#353333] text-left mb-4">Sign In to Continue!</Text>
+            {/* <Image source={Signin} className="my-3" /> */}
+          </View>
           <View className="w-full mb-6 flex justify-center items-center">
-            <Text className="text-3xl font-bold text-left mb-4">Sign In to Continue!</Text>
+            {/* <Text className="text-3xl font-bold text-[#353333] text-left mb-4">Sign In to Continue!</Text> */}
             <Image source={Signin} className="my-3" />
           </View>
           
           {/* Using FormFeild component for email and password input */}
           <FormFeild
-            title="Email"
+            title="Email or Phone"
             value={formData.email}
             onChangeText={(value) => handleChangeText('email', value)}
             otherStyles="mb-4"
@@ -51,7 +55,7 @@ const SignIn = () => {
           {/* Forgot Password and Sign In Button */}
           <View className="mt-10">
             <TouchableOpacity>
-              <Text className="font-semibold text-center text-gray-500 mb-5">Forgot password?</Text>
+              <Text className="font-semibold text-center text-[#424242] mb-5">Forgot password?</Text>
             </TouchableOpacity>
             
             <TouchableOpacity onPress={() => router.push('/Home')}>

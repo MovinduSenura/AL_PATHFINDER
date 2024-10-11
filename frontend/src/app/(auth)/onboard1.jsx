@@ -28,9 +28,9 @@ const Onboard1 = () => {
         <SafeAreaView className="flex-1 bg-[#76B4D0]">
             <View className="flex-1">
                 <Image source={Onboard} className="-mt-14 mx-auto" />
-                <Text className="px-5 text-4xl font-bold mt-10" style={{ fontFamily: 'serif' }} >Turn On</Text>
-                <Text className="px-5 text-4xl font-bold mb-5" style={{ fontFamily: 'serif' }} >Notifications</Text>
-                <Text className="text-left text-xl mt-2 px-5">
+                <Text className="px-5 text-4xl text-[#353333] font-bold mt-10" style={{ fontFamily: 'serif' }} >Turn On</Text>
+                <Text className="px-5 text-4xl text-[#353333] font-bold mb-5" style={{ fontFamily: 'serif' }} >Notifications</Text>
+                <Text className="text-left text-2xl mt-2 px-5">
                     Get notified about teachers, counselors and new programs.
                 </Text>
             </View>
