@@ -6,6 +6,9 @@ const StackLayout = () => {
             <Stack.Screen
                 name="index"
                 options={{  headerShown: false }} />
+                 <Stack.Screen
+                name="displayads"
+                options={{  headerShown: false }} />
         </Stack>
     )
 }
