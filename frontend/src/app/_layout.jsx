@@ -23,7 +23,7 @@ const StackLayout = () => {
             fontWeight: 'bold',
           },
           headerStyle: {
-            backgroundColor: "#76B4D0",
+            backgroundColor: "#76B4D0",            
           },
           headerRight: ({ focused }) => (
             <Ionicons
@@ -51,6 +51,11 @@ const StackLayout = () => {
           headerShown: false
         }}
       />
+      <Stack.Screen
+        name="index"
+        options={{
+          headerShown: false
+        }} />
     </Stack>
   );
 };
