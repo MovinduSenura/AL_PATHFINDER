@@ -29,7 +29,7 @@ const SignUp = () => {
             >
                 <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', paddingHorizontal: 24, paddingTop: 56 }}>
                     <View className="w-full mb-6">
-                        <Text className="text-3xl font-bold text-left mb-4">Sign Up</Text>
+                        <Text className="text-3xl text-[#353333] font-bold text-left mb-4">Sign Up</Text>
                     </View>
                     
                     {/* Using FormFeild component for each input */}

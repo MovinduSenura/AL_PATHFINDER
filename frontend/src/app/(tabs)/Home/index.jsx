@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import React from 'react';
 import { View, Text, StyleSheet, Image, Pressable, ScrollView, Platform } from 'react-native';
 
@@ -14,7 +15,7 @@ const Home = () => {
 
       {/* Ensure the ScrollView has flex and padding/margin for display */}
       <ScrollView contentContainerStyle={styles.scrollableSection}>
-        <Pressable style={styles.card} onPress={() => {}}>
+        <Pressable style={styles.card} onPress={() => router.push('/Questionnaire')}>
           <View style={styles.cardChild} />
           <Image
             style={styles.onczpn8501Icon}
@@ -74,6 +75,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1, // Ensure full height
     alignItems: "stretch", // Allow content to stretch horizontally
+    backgroundColor: "white",
   },
   icon: {
     width: "100%",
@@ -135,6 +137,7 @@ const styles = StyleSheet.create({
     flexGrow: 1, // Ensure scrolling
     paddingBottom: 20, // Add padding to avoid cutoff
     alignItems: "center", // Center cards horizontally
+    marginTop: 5,
   },
 });
 
