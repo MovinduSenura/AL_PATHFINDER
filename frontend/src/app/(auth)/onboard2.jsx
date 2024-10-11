@@ -14,10 +14,14 @@ const Onboard2 = () => {
         </Text>
       </View>
       <View className="flex-col items-center mb-10">
-      <Text className="text-center text-gray-400 mb-2 text-xl">Tap to learn more...</Text>
-        <Link href={'/signup'} className="bg-[#76B4D0] w-80 px-8 py-3 mb-2 rounded-2xl text-lg text-center font-semibold">
-          Get Started
-        </Link>
+        <Text className="text-center text-gray-400 mb-2 text-xl">Tap to learn more...</Text>
+
+        {/* Wrap Link in a View for rounded corners */}
+        <View className="bg-[#76B4D0] w-80 rounded-2xl">
+          <Link href={'/signup'} className=" text-lg text-center font-semibold py-3">
+            Get Started
+          </Link>
+        </View>
       </View>
     </SafeAreaView>
   );

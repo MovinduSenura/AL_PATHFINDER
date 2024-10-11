@@ -1,11 +1,11 @@
 import { Stack } from "expo-router";
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import Logo from "../assets/images/logo.png"; // Adjust the path as necessary
+import Logo from "../assets/images/minilogo.svg"; // Adjust the path as necessary
 
 const HeaderTitle = () => (
   <View style={styles.headerTitleContainer}>
-    <Image source={Logo} style={styles.logo} />
+    <Logo style={styles.logo} />
     <Text style={styles.headerTitleText}>AL PATH FINDER</Text>
   </View>
 );
@@ -23,14 +23,14 @@ const StackLayout = () => {
             fontWeight: 'bold',
           },
           headerStyle: {
-            backgroundColor: "#76B4D0",            
+            backgroundColor: "#76B4D0",
           },
           headerRight: ({ focused }) => (
             <Ionicons
               name="notifications"
               size={25}
               color={focused ? "#000" : "#FFF"}
-              style={{ marginRight: 15 }}
+              style={{ marginRight: 4 }}
               onPress={() => alert('Notifications')}
             />
           ),
@@ -39,12 +39,14 @@ const StackLayout = () => {
               name="menu"
               size={25}
               color={focused ? "#000" : "#FFF"}
-              style={{ marginLeft: 15 }}
+              style={{ marginLeft: 4 }}
               onPress={() => alert('Menu')}
             />
           ),
+          headerBackVisible: false
         }}
       />
+
       <Stack.Screen
         name="(auth)"
         options={{

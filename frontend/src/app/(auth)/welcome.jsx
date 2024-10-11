@@ -15,7 +15,7 @@ const Welcome = () => {
   }, []);
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
+    <SafeAreaView className="flex-1 bg-white ">
       <View className="flex-1 justify-center items-center">
         <Logo width={350} height={350} />
       </View>
