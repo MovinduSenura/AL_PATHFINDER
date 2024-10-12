@@ -3,53 +3,53 @@ import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 
 const questions = [
   {
-    question: "What is 5 + 7?",
-    options: ["10", "11", "12", "13"],
+    question: "What is the capital of France?",
+    options: ["Berlin", "Madrid", "Paris", "Lisbon"],
     correctOption: 2
   },
   {
-    question: "What is the square root of 64?",
-    options: ["6", "7", "8", "9"],
-    correctOption: 2
-  },
-  {
-    question: "What is 15% of 200?",
-    options: ["20", "25", "30", "35"],
-    correctOption: 2
-  },
-  {
-    question: "What is the value of π (pi) to two decimal places?",
-    options: ["3.12", "3.14", "3.16", "3.18"],
+    question: "Which planet is known as the Red Planet?",
+    options: ["Earth", "Mars", "Jupiter", "Saturn"],
     correctOption: 1
   },
   {
-    question: "What is 9 x 9?",
-    options: ["72", "81", "90", "99"],
-    correctOption: 1
+    question: "What is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    correctOption: 3
   },
   {
-    question: "What is the derivative of x^2?",
-    options: ["x", "2x", "x^2", "2x^2"],
-    correctOption: 1
-  },
-  {
-    question: "What is the integral of 1/x?",
-    options: ["ln(x)", "1/x^2", "x", "e^x"],
+    question: "Who wrote 'Romeo and Juliet'?",
+    options: ["William Shakespeare", "Charles Dickens", "Mark Twain", "Jane Austen"],
     correctOption: 0
   },
   {
-    question: "What is the solution to the equation 2x + 3 = 7?",
-    options: ["x = 1", "x = 2", "x = 3", "x = 4"],
+    question: "What is the smallest prime number?",
+    options: ["0", "1", "2", "3"],
+    correctOption: 2
+  },
+  {
+    question: "What is the chemical symbol for water?",
+    options: ["O2", "H2O", "CO2", "NaCl"],
     correctOption: 1
   },
   {
-    question: "What is the area of a triangle with base 5 and height 10?",
-    options: ["25", "30", "35", "40"],
-    correctOption: 0
+    question: "Who painted the Mona Lisa?",
+    options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
+    correctOption: 2
   },
   {
-    question: "What is the next prime number after 7?",
-    options: ["9", "10", "11", "12"],
+    question: "What is the hardest natural substance on Earth?",
+    options: ["Gold", "Iron", "Diamond", "Platinum"],
+    correctOption: 2
+  },
+  {
+    question: "Which country is known as the Land of the Rising Sun?",
+    options: ["China", "Japan", "Thailand", "South Korea"],
+    correctOption: 1
+  },
+  {
+    question: "What is the largest planet in our solar system?",
+    options: ["Earth", "Mars", "Jupiter", "Saturn"],
     correctOption: 2
   }
 ];

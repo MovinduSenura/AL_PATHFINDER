@@ -20,7 +20,7 @@ const StackLayout = () => {
         name="questionsPage"
         options={{
           headerShown: true,
-          title: "(Stream Name) Quiz",
+          title: "Physical Science Skill Test",
           headerBackTitleVisible: false,
           headerTintColor: "#353333",
           headerTitleStyle: {
@@ -47,6 +47,58 @@ const StackLayout = () => {
         options={{
           headerShown: true,
           title: "My Results",
+          headerBackTitleVisible: false,
+          headerTintColor: "#353333",
+          headerTitleStyle: {
+            color: "#353333",
+            fontWeight: "bold",
+          },
+        }}
+      />
+      <Stack.Screen
+        name="questionPageArt"
+        options={{
+          headerShown: true,
+          title: "Art Skill Test",
+          headerBackTitleVisible: false,
+          headerTintColor: "#353333",
+          headerTitleStyle: {
+            color: "#353333",
+            fontWeight: "bold",
+          },
+        }}
+      />
+        <Stack.Screen
+        name="questionPageBio"
+        options={{
+          headerShown: true,
+          title: "Bio Skill Test",
+          headerBackTitleVisible: false,
+          headerTintColor: "#353333",
+          headerTitleStyle: {
+            color: "#353333",
+            fontWeight: "bold",
+          },
+        }}
+      />
+             <Stack.Screen
+        name="questionPageCmz"
+        options={{
+          headerShown: true,
+          title: "Commerce Skill Test",
+          headerBackTitleVisible: false,
+          headerTintColor: "#353333",
+          headerTitleStyle: {
+            color: "#353333",
+            fontWeight: "bold",
+          },
+        }}
+      />
+             <Stack.Screen
+        name="questionPagetechnology"
+        options={{
+          headerShown: true,
+          title: "Technology Skill Test",
           headerBackTitleVisible: false,
           headerTintColor: "#353333",
           headerTitleStyle: {

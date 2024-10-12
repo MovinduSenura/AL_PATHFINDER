@@ -22,7 +22,7 @@ const CreateAppointment = () => {
     };
 
     try {
-      const response = await fetch('http://192.168.1.100:4700/send-email', { // Replace with your server IP
+      const response = await fetch('http://192.168.56.1:4700/send-email', { // Replace with your server IP
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

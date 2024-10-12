@@ -21,6 +21,19 @@ exports.getQuizzes = async (req, res) => {
     }
 };
 
+// Get a quiz by ID
+exports.getQuizById = async (req, res) => {
+    try {
+        const quiz = await Quiz.findById(req.params.id);
+        if (!quiz) {
+            return res.status(404).send();
+        }
+        res.status(200).send(quiz);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+};
+
 // Update a quiz (PATCH method)
 exports.updateQuiz = async (req, res) => {
     try {
@@ -44,5 +57,5 @@ exports.deleteQuiz = async (req, res) => {
         res.send(quiz);
     } catch (error) {
         res.status(500).send(error);
-    }
+    }
 };

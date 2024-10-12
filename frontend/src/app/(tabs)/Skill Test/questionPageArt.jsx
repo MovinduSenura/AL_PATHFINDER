@@ -3,53 +3,53 @@ import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 
 const questions = [
   {
-    question: "What is 5 + 7?",
-    options: ["10", "11", "12", "13"],
+    question: "Who painted the Mona Lisa?",
+    options: ["Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Claude Monet"],
     correctOption: 2
   },
   {
-    question: "What is the square root of 64?",
-    options: ["6", "7", "8", "9"],
-    correctOption: 2
-  },
-  {
-    question: "What is 15% of 200?",
-    options: ["20", "25", "30", "35"],
-    correctOption: 2
-  },
-  {
-    question: "What is the value of π (pi) to two decimal places?",
-    options: ["3.12", "3.14", "3.16", "3.18"],
+    question: "What is the art style of Pablo Picasso known as?",
+    options: ["Impressionism", "Cubism", "Surrealism", "Realism"],
     correctOption: 1
   },
   {
-    question: "What is 9 x 9?",
-    options: ["72", "81", "90", "99"],
-    correctOption: 1
-  },
-  {
-    question: "What is the derivative of x^2?",
-    options: ["x", "2x", "x^2", "2x^2"],
-    correctOption: 1
-  },
-  {
-    question: "What is the integral of 1/x?",
-    options: ["ln(x)", "1/x^2", "x", "e^x"],
+    question: "Which artist is famous for his painting 'Starry Night'?",
+    options: ["Vincent van Gogh", "Salvador Dalí", "Claude Monet", "Henri Matisse"],
     correctOption: 0
   },
   {
-    question: "What is the solution to the equation 2x + 3 = 7?",
-    options: ["x = 1", "x = 2", "x = 3", "x = 4"],
+    question: "What is the primary medium used in sculpture?",
+    options: ["Oil paint", "Watercolor", "Clay", "Charcoal"],
+    correctOption: 2
+  },
+  {
+    question: "Which famous artist cut off his own ear?",
+    options: ["Pablo Picasso", "Vincent van Gogh", "Leonardo da Vinci", "Michelangelo"],
     correctOption: 1
   },
   {
-    question: "What is the area of a triangle with base 5 and height 10?",
-    options: ["25", "30", "35", "40"],
+    question: "What is the term for a painting done on wet plaster?",
+    options: ["Fresco", "Mosaic", "Etching", "Lithograph"],
     correctOption: 0
   },
   {
-    question: "What is the next prime number after 7?",
-    options: ["9", "10", "11", "12"],
+    question: "Which artist is known for the painting 'The Persistence of Memory'?",
+    options: ["Salvador Dalí", "Pablo Picasso", "Henri Matisse", "Claude Monet"],
+    correctOption: 0
+  },
+  {
+    question: "What is the name of the famous museum in Paris that houses the Mona Lisa?",
+    options: ["The Louvre", "The Met", "The British Museum", "The Prado"],
+    correctOption: 0
+  },
+  {
+    question: "Which art movement is characterized by a focus on light and color?",
+    options: ["Baroque", "Renaissance", "Impressionism", "Cubism"],
+    correctOption: 2
+  },
+  {
+    question: "Who painted the ceiling of the Sistine Chapel?",
+    options: ["Raphael", "Leonardo da Vinci", "Michelangelo", "Donatello"],
     correctOption: 2
   }
 ];
