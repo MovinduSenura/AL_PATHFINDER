@@ -28,3 +28,6 @@ app.use(emailRoutes); // Register email routes
 app.listen(PORT, () => {
     console.log(`App is running on port: ${PORT}`);
 });
+
+const quizRoutes = require('./routes/quizRoutes');
+app.use('/api', quizRoutes);
