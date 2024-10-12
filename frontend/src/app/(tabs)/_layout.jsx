@@ -60,7 +60,7 @@ export default TabsLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="Questionnaire"
+        name="Skill Test"
         options={{
           headerShown: false,
           tabBarIcon: ({ focused }) => (

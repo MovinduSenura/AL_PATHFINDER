@@ -15,7 +15,7 @@ const Home = () => {
 
       {/* Ensure the ScrollView has flex and padding/margin for display */}
       <ScrollView contentContainerStyle={styles.scrollableSection}>
-        <Pressable style={styles.card} onPress={() => router.push('/Questionnaire')}>
+        <Pressable style={styles.card} onPress={() => router.push('/Skill Test')}>
           <View style={styles.cardChild} />
           <Image
             style={styles.onczpn8501Icon}
@@ -41,7 +41,7 @@ const Home = () => {
           <Text style={styles.skillTest}>Degree Selection</Text>
         </Pressable>
 
-        <Pressable style={styles.card} onPress={() => {}}>
+        <Pressable style={styles.card} onPress={() => router.push('/Home/consultationHome')}>
           <View style={styles.cardChild} />
           <Image
             style={styles.onczpn8501Icon}
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     flexGrow: 1, // Ensure scrolling
     paddingBottom: 20, // Add padding to avoid cutoff
     alignItems: "center", // Center cards horizontally
-    marginTop: 5,
+    marginTop: 10,
   },
 });
 

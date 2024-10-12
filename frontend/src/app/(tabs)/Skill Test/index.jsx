@@ -26,7 +26,7 @@ const QuizStreams = () => {
               source={require("../../../assets/images/maths.png")}
             />
             <Text style={styles.streamName}>Physical Science</Text>
-            <TouchableOpacity onPress={() => router.push("/Questionnaire/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
+            <TouchableOpacity onPress={() => router.push("/Skill Test/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
               <View className="bg-[#2E6E8E] py-2.5 rounded-lg">
                 <Text className="text-md text-center text-white font-semibold">
                   Attempt Quiz
@@ -45,7 +45,7 @@ const QuizStreams = () => {
             source={require("../../../assets/images/commerce.png")}
           />
           <Text style={styles.streamName}>Commerce</Text>
-          <TouchableOpacity onPress={() => router.push("/Questionnaire/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
+          <TouchableOpacity onPress={() => router.push("/Skill Test/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
               <View className="bg-[#2E6E8E] py-2.5 rounded-lg">
                 <Text className="text-md text-center text-white font-semibold">
                   Attempt Quiz
@@ -62,7 +62,7 @@ const QuizStreams = () => {
             source={require("../../../assets/images/bio.png")}
           />
           <Text style={styles.streamName}>Bio Science</Text>
-          <TouchableOpacity onPress={() => router.push("/Questionnaire/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
+          <TouchableOpacity onPress={() => router.push("/Skill Test/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
               <View className="bg-[#2E6E8E] py-2.5 rounded-lg">
                 <Text className="text-md text-center text-white font-semibold">
                   Attempt Quiz
@@ -80,7 +80,7 @@ const QuizStreams = () => {
             source={require("../../../assets/images/arts.png")}
           />
           <Text style={styles.streamName}>Arts</Text>
-          <TouchableOpacity onPress={() => router.push("/Questionnaire/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
+          <TouchableOpacity onPress={() => router.push("/Skill Test/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
               <View className="bg-[#2E6E8E] py-2.5 rounded-lg">
                 <Text className="text-md text-center text-white font-semibold">
                   Attempt Quiz
@@ -97,7 +97,7 @@ const QuizStreams = () => {
             source={require("../../../assets/images/tech.png")}
           />
           <Text style={styles.streamName}>Technology</Text>
-          <TouchableOpacity onPress={() => router.push("/Questionnaire/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
+          <TouchableOpacity onPress={() => router.push("/Skill Test/questionsPage")} className="w-4/6 ml-auto mr-2 mt-14">
               <View className="bg-[#2E6E8E] py-2.5 rounded-lg">
                 <Text className="text-md text-center text-white font-semibold">
                   Attempt Quiz

@@ -5,7 +5,16 @@ const StackLayout = () => {
         <Stack>
             <Stack.Screen
                 name="index"
-                options={{  headerShown: false }} />
+                options={{
+                    headerShown: true,
+                    title: "Student Profile",
+                    headerBackTitleVisible: false,
+                    headerTintColor: "#353333",
+                    headerTitleStyle: {
+                      color: "#353333",
+                      fontWeight: "bold",
+                    },
+                  }} />
         </Stack>
     )
 }
