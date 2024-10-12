@@ -35,7 +35,7 @@ const Onboard1 = () => {
                 </Text>
             </View>
             <View className="flex-col items-center mb-10">
-                <TouchableOpacity onPress={handleAlert} className="w-80 ">
+                <TouchableOpacity onPress={handleAlert} className="w-80">
                     <View className="bg-white px-8 py-3 mb-2 rounded-2xl">
                         <Text className="text-lg text-center font-semibold">Continue</Text>
                     </View>
