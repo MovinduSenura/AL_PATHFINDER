@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, FlatList, StyleSheet, Dimensions, Image } from 'react-native';
+import { View, Text, FlatList, StyleSheet, Dimensions, Image, Modal, TextInput, Button, TouchableOpacity } from 'react-native';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 import { Card, Icon } from 'react-native-elements';
 
@@ -35,74 +35,134 @@ const AdvertisementScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Advertisements</Text>
-    <View style={{ flex: 1 }}>
-      
-      {/* <Carousel
-        data={carouselData}
-        renderItem={renderCarouselItem}
-        sliderWidth={width}
-        itemWidth={width - 60}
-      /> */}
-
-      <TabView
-        navigationState={{ index, routes }}
-        renderScene={renderScene}
-        onIndexChange={setIndex}
-        initialLayout={{ width: Dimensions.get('window').width }}
-        renderTabBar={(props) => (
-          <TabBar
-            {...props}
-            indicatorStyle={{ backgroundColor: 'gray' }}
-            style={{ backgroundColor: 'white' }}
-            labelStyle={{ color: 'black', fontWeight: 'bold' }}
-          />
-        )}
-      />
-    </View>
+      {/* <Text style={styles.header}>Advertisements</Text> */}
+      <View style={{ flex: 1 }}>
+        <TabView
+          navigationState={{ index, routes }}
+          renderScene={renderScene}
+          onIndexChange={setIndex}
+          initialLayout={{ width: Dimensions.get('window').width }}
+          renderTabBar={(props) => (
+            <TabBar
+              {...props}
+              indicatorStyle={{ backgroundColor: 'gray' }}
+              style={{ backgroundColor: 'white' }}
+              labelStyle={{ color: 'black', fontWeight: 'bold' }}
+            />
+          )}
+        />
+      </View>
     </View>
   );
 };
 
-const AdCard = ({ ad }) => (
-<Card>
-  <Card.Title>{ad.title}</Card.Title>
-  <Card.Divider />
-  <Image source={ad.image} style={styles.image} />
-  <View style={styles.adInfo}>
-    <Text>{ad.description}</Text>
-    <View style={styles.iconRow}>
-      <Text style={{ fontWeight: '600' }}>📧 {ad.phone}</Text>
-    </View>
-    <View style={styles.iconRow}> 
-      <Text style={{ fontWeight: '600' }}>📞 {ad.email}</Text>
-    </View>
-    <View style={styles.iconRow}>
-      <Text style={{ fontWeight: '600' }}>🏷️ Type: {ad.classType}</Text>
-    </View>
-    <View style={styles.iconRow}>
-      <Text style={{ fontWeight: '600' }}>📍 Location: {ad.location}</Text>
-    </View>
-    <View style={styles.iconRow}>
-      <Text style={{ fontWeight: '600' }}>🏢 District: {ad.district}</Text>
-    </View>
-    <View style={styles.iconRow}>
-      <Text style={{ fontWeight: '600' }}>👨‍🏫 Conducted By: {ad.conductedBy}</Text>
-    </View>
-    <View style={styles.iconRow}>
-      <Text style={{ fontWeight: '600' }}>💰 Fee: {ad.courseFee}</Text>
-    </View>
-  </View>
-</Card>
+const AdCard = ({ ad }) => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [contactNumber, setContactNumber] = useState('');
 
-);
+  const handlePress = () => {
+    setModalVisible(true);
+  };
 
-const renderCarouselItem = ({ item }) => (
-  <View style={styles.carouselItem}>
-    <Text>{item.title}</Text>
-    <Text>{item.description}</Text>
+  const handleSubmit = () => {
+    // Handle form submission
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Contact Number:', contactNumber);
+    setModalVisible(false);
+  };
+
+  return (
+    <TouchableOpacity onPress={handlePress}>
+      <Card>
+        <Card.Title>{ad.title}</Card.Title>
+        <Card.Divider />
+        <Image source={ad.image} style={styles.image} />
+        <View style={styles.adInfo}>
+          <Text>{ad.description}</Text>
+          <View style={styles.iconRow}>
+            <Text style={{ fontWeight: '600' }}>📧 {ad.phone}</Text>
+          </View>
+          <View style={styles.iconRow}>
+            <Text style={{ fontWeight: '600' }}>📞 {ad.email}</Text>
+          </View>
+          <View style={styles.iconRow}>
+            <Text style={{ fontWeight: '600' }}>🏷️ Type: {ad.classType}</Text>
+          </View>
+          <View style={styles.iconRow}>
+            <Text style={{ fontWeight: '600' }}>📍 Location: {ad.location}</Text>
+          </View>
+          <View style={styles.iconRow}>
+            <Text style={{ fontWeight: '600' }}>👨‍🏫 Conducted By: {ad.conductedBy}</Text>
+          </View>
+          <View style={styles.iconRow}>
+            <Text style={{ fontWeight: '600' }}>💰 Fee: {ad.courseFee}</Text>
+          </View>
+        </View>
+      </Card>
+
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>If you like to join this,                         Fill these details:</Text>
+            <TextInput
+              style={styles.input}
+              placeholder="Name"
+              value={name}
+              onChangeText={setName}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Email"
+              value={email}
+              onChangeText={setEmail}
+              keyboardType="email-address"
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Contact Number"
+              value={contactNumber}
+              onChangeText={setContactNumber}
+              keyboardType="phone-pad"
+            />
+           <TouchableOpacity onPress={handleSubmit} className="w-[80%] mt-4 mx-auto">
+  <View className="bg-[#5099B4] py-2.5 rounded-lg">
+    <Text className="text-md text-center text-white font-semibold">
+      Submit
+    </Text>
   </View>
-);
+</TouchableOpacity>
+
+<TouchableOpacity onPress={() => setModalVisible(false)} className="w-[80%] mt-4 mx-auto">
+  <View className="bg-[#5099B4] py-2.5 rounded-lg">
+    <Text className="text-md text-center text-white font-semibold">
+      Cancel
+    </Text>
+  </View>
+</TouchableOpacity>
+
+          </View>
+        </View>
+      </Modal>
+    </TouchableOpacity>
+  );
+};
+
+// const renderCarouselItem = ({ item }) => (
+//   <View style={styles.carouselItem}>
+//     <Text>{item.title}</Text>
+//     <Text>{item.description}</Text>
+//   </View>
+// );
 
 const styles = StyleSheet.create({
   container: {
@@ -131,13 +191,47 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 5,
   },
-
   image: {
-    width: '100%',  // Adjust to fit your design
-    height: 150,    // Adjust to fit your design
+    width: '100%',
+    height: 150,
     borderRadius: 10,
-    marginBottom: 10, // Space between image and description
-  }
+    marginBottom: 10,
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+  modalView: {
+    width: '80%',
+    backgroundColor: 'white',
+    borderRadius: 20,
+    padding: 35,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 5,
+  },
+  modalText: {
+    marginBottom: 15,
+    textAlign: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  input: {
+    height: 40,
+    borderColor: 'gray',
+    borderWidth: 1,
+    marginBottom: 10,
+    width: '80%',
+    paddingHorizontal: 10,
+  },
 });
 
 export default AdvertisementScreen;
