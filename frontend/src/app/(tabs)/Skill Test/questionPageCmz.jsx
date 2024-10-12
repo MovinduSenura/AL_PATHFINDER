@@ -3,54 +3,54 @@ import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 
 const questions = [
   {
-    question: "What is 5 + 7?",
-    options: ["10", "11", "12", "13"],
-    correctOption: 2
-  },
-  {
-    question: "What is the square root of 64?",
-    options: ["6", "7", "8", "9"],
-    correctOption: 2
-  },
-  {
-    question: "What is 15% of 200?",
-    options: ["20", "25", "30", "35"],
-    correctOption: 2
-  },
-  {
-    question: "What is the value of π (pi) to two decimal places?",
-    options: ["3.12", "3.14", "3.16", "3.18"],
+    question: "What is the primary objective of financial management?",
+    options: ["Profit Maximization", "Wealth Maximization", "Sales Maximization", "Cost Minimization"],
     correctOption: 1
   },
   {
-    question: "What is 9 x 9?",
-    options: ["72", "81", "90", "99"],
+    question: "Which financial statement shows a company's assets, liabilities, and equity?",
+    options: ["Income Statement", "Balance Sheet", "Cash Flow Statement", "Statement of Retained Earnings"],
     correctOption: 1
   },
   {
-    question: "What is the derivative of x^2?",
-    options: ["x", "2x", "x^2", "2x^2"],
-    correctOption: 1
-  },
-  {
-    question: "What is the integral of 1/x?",
-    options: ["ln(x)", "1/x^2", "x", "e^x"],
+    question: "What is the term for the cost of borrowing money?",
+    options: ["Interest", "Dividend", "Capital", "Expense"],
     correctOption: 0
   },
   {
-    question: "What is the solution to the equation 2x + 3 = 7?",
-    options: ["x = 1", "x = 2", "x = 3", "x = 4"],
+    question: "Which market structure is characterized by a single seller?",
+    options: ["Perfect Competition", "Monopoly", "Oligopoly", "Monopolistic Competition"],
     correctOption: 1
   },
   {
-    question: "What is the area of a triangle with base 5 and height 10?",
-    options: ["25", "30", "35", "40"],
+    question: "What is the formula for calculating Gross Profit?",
+    options: ["Revenue - Expenses", "Revenue - Cost of Goods Sold", "Net Income - Expenses", "Net Income - Cost of Goods Sold"],
+    correctOption: 1
+  },
+  {
+    question: "Which type of business organization is owned by shareholders?",
+    options: ["Sole Proprietorship", "Partnership", "Corporation", "Cooperative"],
+    correctOption: 2
+  },
+  {
+    question: "What is the term for the total market value of all final goods and services produced in a country?",
+    options: ["Gross Domestic Product", "Net National Product", "Gross National Product", "Net Domestic Product"],
     correctOption: 0
   },
   {
-    question: "What is the next prime number after 7?",
-    options: ["9", "10", "11", "12"],
-    correctOption: 2
+    question: "Which accounting principle states that revenue should be recognized when it is earned?",
+    options: ["Matching Principle", "Revenue Recognition Principle", "Cost Principle", "Full Disclosure Principle"],
+    correctOption: 1
+  },
+  {
+    question: "What is the term for the reduction in the value of an asset over time?",
+    options: ["Appreciation", "Depreciation", "Amortization", "Depletion"],
+    correctOption: 1
+  },
+  {
+    question: "Which financial ratio measures a company's ability to pay short-term obligations?",
+    options: ["Current Ratio", "Debt-to-Equity Ratio", "Return on Equity", "Gross Margin"],
+    correctOption: 0
   }
 ];
 

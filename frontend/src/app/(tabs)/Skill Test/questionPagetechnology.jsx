@@ -3,53 +3,53 @@ import { View, Text, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 
 const questions = [
   {
-    question: "What is 5 + 7?",
-    options: ["10", "11", "12", "13"],
-    correctOption: 2
-  },
-  {
-    question: "What is the square root of 64?",
-    options: ["6", "7", "8", "9"],
-    correctOption: 2
-  },
-  {
-    question: "What is 15% of 200?",
-    options: ["20", "25", "30", "35"],
-    correctOption: 2
-  },
-  {
-    question: "What is the value of π (pi) to two decimal places?",
-    options: ["3.12", "3.14", "3.16", "3.18"],
-    correctOption: 1
-  },
-  {
-    question: "What is 9 x 9?",
-    options: ["72", "81", "90", "99"],
-    correctOption: 1
-  },
-  {
-    question: "What is the derivative of x^2?",
-    options: ["x", "2x", "x^2", "2x^2"],
-    correctOption: 1
-  },
-  {
-    question: "What is the integral of 1/x?",
-    options: ["ln(x)", "1/x^2", "x", "e^x"],
+    question: "What does CPU stand for?",
+    options: ["Central Processing Unit", "Central Process Unit", "Computer Personal Unit", "Central Processor Unit"],
     correctOption: 0
   },
   {
-    question: "What is the solution to the equation 2x + 3 = 7?",
-    options: ["x = 1", "x = 2", "x = 3", "x = 4"],
-    correctOption: 1
+    question: "Which company developed the Android operating system?",
+    options: ["Apple", "Microsoft", "Google", "IBM"],
+    correctOption: 2
   },
   {
-    question: "What is the area of a triangle with base 5 and height 10?",
-    options: ["25", "30", "35", "40"],
+    question: "What does HTTP stand for?",
+    options: ["HyperText Transfer Protocol", "HyperText Transmission Protocol", "HyperText Transfer Program", "HyperText Transmission Program"],
     correctOption: 0
   },
   {
-    question: "What is the next prime number after 7?",
-    options: ["9", "10", "11", "12"],
+    question: "What is the name of the first electronic general-purpose computer?",
+    options: ["ENIAC", "UNIVAC", "IBM 701", "EDSAC"],
+    correctOption: 0
+  },
+  {
+    question: "Which programming language is known as the backbone of web development?",
+    options: ["Python", "JavaScript", "C++", "Java"],
+    correctOption: 1
+  },
+  {
+    question: "What does RAM stand for?",
+    options: ["Random Access Memory", "Read Access Memory", "Run Access Memory", "Random Active Memory"],
+    correctOption: 0
+  },
+  {
+    question: "Which company is known for the creation of the iPhone?",
+    options: ["Samsung", "Google", "Apple", "Microsoft"],
+    correctOption: 2
+  },
+  {
+    question: "What is the main function of a web browser?",
+    options: ["To compile code", "To browse the internet", "To manage files", "To edit photos"],
+    correctOption: 1
+  },
+  {
+    question: "What does AI stand for in technology?",
+    options: ["Artificial Intelligence", "Automated Intelligence", "Advanced Intelligence", "Artificial Integration"],
+    correctOption: 0
+  },
+  {
+    question: "Which company developed the Windows operating system?",
+    options: ["Apple", "Google", "Microsoft", "IBM"],
     correctOption: 2
   }
 ];
